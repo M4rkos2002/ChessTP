@@ -39,7 +39,7 @@ public class CheckersPromote extends Promote{
 
     @Override
     public Game update(Game game, Pair<Integer,Integer> fromCoord, Pair<Integer,Integer> toCoord){
-        List<MovementRule> rules = new ArrayList<>(); rules.add(new QueenMove()); rules.add(new QueenCheckerCapture());rules.add(new QueenVerticalMovement());rules.add(new QueenHorizontalMovement());rules.add(new QueenDiagonalMovement());
+        List<MovementRule> rules = new ArrayList<>(); rules.add(new QueenMove()); rules.add(new QueenCheckerCapture()); rules.add(new QueenDiagonalMovement());
         return updateHelper(game, fromCoord, toCoord, PieceName.QUEENCHECKER, rules);
     }
 
